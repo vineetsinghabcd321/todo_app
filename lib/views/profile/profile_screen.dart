@@ -7,6 +7,7 @@ import '../../models/task_item.dart';
 import '../../utils/date_utils.dart';
 import '../../viewmodels/task_viewmodel.dart';
 import '../../viewmodels/theme_viewmodel.dart';
+import '../home/home_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -252,15 +253,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   return;
                 }
 
-                if (index == 0) {
-                  Navigator.of(context).pop();
-                  return;
-                }
-
-                setState(() => _selectedTabIndex = index);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Navigation screen not connected yet'),
+                // Navigate back to the main HomeScreen and select the requested tab.
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (_) => HomeScreen(initialIndex: index),
                   ),
                 );
               },

@@ -76,6 +76,19 @@ Suggested screenshots to capture and add
 - Empty state view when no tasks are available
 - Task card in completed state
 
+Screenshots
+
+The following screenshots were detected in `assets/screenshot/`. You can remove or rename any of them and update the paths below as needed.
+
+- Home screen: ![Home Screen](assets/screenshot/Home_screen.png)
+- iOS Home: ![iOS Home](assets/screenshot/IOS_home_screen.png)
+- Tasks list (1): ![Tasks](assets/screenshot/Tasks_screen.png)
+- Tasks list (2): ![Tasks 2](assets/screenshot/Tasks_screen_2.png)
+- Add Task screen: ![Add Task](assets/screenshot/task_add_screen.png)
+- Profile page: ![Profile](assets/screenshot/profile_page.png)
+
+If you want me to, I can automatically register these paths in `pubspec.yaml` and commit a version of the README with these images embedded.
+
 Common issues and fixes
 
 - Overflow on small iOS screens: inspect the header/greeting row and replace fixed-width children with `Flexible` or wrap the content using `Wrap`.

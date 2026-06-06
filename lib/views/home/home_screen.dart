@@ -11,14 +11,22 @@ import '../task/add_edit_task_screen.dart';
 import '../profile/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, this.initialIndex = 0});
+
+  final int initialIndex;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _currentIndex = 0;
+  late int _currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.initialIndex;
+  }
 
   Future<void> _openAddTaskSheet(BuildContext context) {
     return showModalBottomSheet<void>(
@@ -229,8 +237,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            const SizedBox(width: 6),
-                            const Text('👋', style: TextStyle(fontSize: 22)),
                           ],
                         ),
                         const SizedBox(height: 6),
