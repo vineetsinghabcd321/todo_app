@@ -108,9 +108,6 @@ Where to look for implementation details (quick pointers)
 - `todo_app/lib/viewmodels/task_viewmodel.dart`: filtering, derived lists, and counts.
 - `todo_app/lib/widgets/task_card.dart`: composition of list items and actions.
 
-If you'd like, I can produce a ready-to-copy README section that includes your screenshots once you add them to `assets/screenshots/`.
 
 ---
-
-If this is good, I'll mark the README for `todo_app` as complete. Want me to add the screenshot placeholders now or generate a `CONTRIBUTING.md` next?
 
